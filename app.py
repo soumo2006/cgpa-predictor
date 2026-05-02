@@ -8,7 +8,7 @@ model = pickle.load(open('cgpa_model.pkl', 'rb'))
 st.title("🎓 CGPA to Package Predictor")
 st.write("Enter your CGPA to predict your salary package!")
 
-cgpa = st.slider("Select CGPA", 0.0, 10.0, 7.0, 0.1)
+cgpa = st.slider("Select CGPA", 5.0, 10.0, 7.0, 0.1)
 
 if st.button("Predict Package"):
     result = model.predict([[cgpa]])
